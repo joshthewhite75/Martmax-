@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Martmax</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+</head>
+<body class="page-loading">
+  <div id="site-header"></div>
+
+  <section class="shop-hero">
+    <div class="container">
+      <p class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:12px">Martmax Store</p>
+      <h1 id="shopTitle">All Products</h1>
+    </div>
+  </section>
+
+  <div class="container shop-layout">
+    <aside class="shop-sidebar" id="shopFilters"></aside>
+    <main>
+      <div class="shop-toolbar">
+        <form class="shop-search" id="shopSearchForm" action="shop.html" method="GET" role="search" aria-label="Search products">
+          <input id="productSearch" type="search" name="q" placeholder="Search products, brands, accessories" aria-label="Search products" list="productSuggestions" />
+          <button type="submit">Search</button>
+        </form>
+        <p class="result-count" id="resultCount">Loading...</p>
+        <select class="sort-select" id="sortSelect" aria-label="Sort products">
+          <option value="default">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name">Name: A–Z</option>
+          <option value="new">New Arrivals</option>
+        </select>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </main>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="js/product-images.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

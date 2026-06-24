@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brands — Martmax</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+</head>
+<body class="page-loading">
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:12px">Trusted partners</p>
+      <h1>Shop by <strong style="font-weight:700">Brand</strong></h1>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="brands-grid reveal" id="brandsGrid"></div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/product-images.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      MartmaxUI.initLayout('brands');
+      const brands = [...new Set(MartmaxCatalog.PRODUCTS.map(p => p.brand))].sort();
+      document.getElementById('brandsGrid').innerHTML = brands.map(b => {
+        const count = MartmaxCatalog.PRODUCTS.filter(p => p.brand === b).length;
+        return `<a href="shop.html?brand=${encodeURIComponent(b)}" class="brand-cell">${b}<br><small style="font-size:12px;font-weight:400;opacity:0.6">${count} products</small></a>`;
+      }).join('');
+    });
+  </script>
+</body>
+</html>

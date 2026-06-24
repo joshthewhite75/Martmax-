@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martmax — Rwanda's Leading Electronics Store</title>
+  <meta name="description" content="Premium electronics, smartphones, gadgets and accessories. Free shipping across Kigali. Pay with MTN MoMo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+</head>
+<body class="page-loading">
+  <div id="site-header"></div>
+
+  <!-- Cinematic Hero -->
+  <section class="hero-cinematic">
+    <video class="hero-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+      <source src="images/iPhone 16 Reveal (4K) - Apple Spectrum (1080p, h264).mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Pure tech for modern progress</p>
+      <h1>Pure <strong>Technology</strong> for Every Leap Forward</h1>
+      <p class="hero-description">Discover devices, accessories, and connected essentials built for speed, clarity, and the next level of everyday innovation.</p>
+      <div class="hero-actions">
+        <a href="shop.html" class="btn btn-primary">Explore Collection</a>
+        <a href="shop.html?cat=smartphones-tablets" class="btn btn-outline">Shop Phones</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- Categories -->
+  <section class="category-showcase">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-label">Browse by category</p>
+          <h2 class="section-title">Find Your <strong>Perfect Tech</strong></h2>
+        </div>
+        <a href="shop.html" class="section-link">View All Products</a>
+      </div>
+      <div class="category-frame reveal">
+        <div class="category-tiles">
+          <a href="shop.html?cat=gadgets-accessories" class="category-tile reveal">
+            <div class="tile-hero">
+              <img class="tile-img" src="images/airpods max.jpg" alt="AirPods Max" />
+            </div>
+            <div class="tile-copy">
+              <h3>Gadgets & Accessories</h3>
+              <span class="tile-count" data-cat-count="gadgets-accessories">0 products</span>
+            </div>
+            <span class="tile-link">Shop Now</span>
+          </a>
+          <a href="shop.html?cat=smartphones-tablets" class="category-tile reveal reveal-delay-1">
+            <div class="tile-hero">
+              <img class="tile-img" src="images/iphone.jpg" alt="iPhone" />
+            </div>
+            <div class="tile-copy">
+              <h3>Smartphones & Tablets</h3>
+              <span class="tile-count" data-cat-count="smartphones-tablets">0 products</span>
+            </div>
+            <span class="tile-link">Shop Now</span>
+          </a>
+          <a href="shop.html?cat=phone-cases" class="category-tile reveal reveal-delay-2">
+            <div class="tile-hero">
+              <img class="tile-img" src="images/protector.jpg" alt="Phone cases" />
+            </div>
+            <div class="tile-copy">
+              <h3>Cases & Protectors</h3>
+              <span class="tile-count" data-cat-count="phone-cases">0 products</span>
+            </div>
+            <span class="tile-link">Shop Now</span>
+          </a>
+          <a href="shop.html?cat=home-kitchen" class="category-tile reveal reveal-delay-3">
+            <div class="tile-hero">
+              <img class="tile-img" src="images/microwave.jpg" alt="Microwave" />
+            </div>
+            <div class="tile-copy">
+              <h3>Home & Kitchen</h3>
+              <span class="tile-count" data-cat-count="home-kitchen">0 products</span>
+            </div>
+            <span class="tile-link">Shop Now</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section style="padding:clamp(60px,10vw,120px) 0">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-label">Curated selection</p>
+          <h2 class="section-title">Featured <strong>Products</strong></h2>
+        </div>
+        <a href="shop.html" class="section-link">View All</a>
+      </div>
+      <div class="product-grid" id="featuredProducts"></div>
+    </div>
+  </section>
+
+  <!-- Flash Deals -->
+  <section class="feature-dark">
+    <div class="container">
+      <div class="section-header reveal" style="border:none;margin-bottom:48px">
+        <div>
+          <p class="section-label" style="color:rgba(255,255,255,0.4)">Limited time</p>
+          <h2 class="section-title">Flash <strong>Deals</strong></h2>
+        </div>
+        <a href="shop.html" class="section-link" style="color:#fff">View All</a>
+      </div>
+      <div class="flash-grid" id="flashDeals"></div>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section style="padding:clamp(60px,10vw,120px) 0;background:var(--gray-100)">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-label">Just landed</p>
+          <h2 class="section-title">New <strong>Arrivals</strong></h2>
+        </div>
+        <a href="shop.html" class="section-link">View All</a>
+      </div>
+      <div class="product-grid" id="newArrivals"></div>
+    </div>
+  </section>
+
+  <!-- Brand Banner -->
+  <section class="brand-banner">
+    <div class="container brand-banner-content reveal">
+      <h2><em>Ultra Light</em> — Ultra Fast — Gaming & Audio</h2>
+      <a href="shop.html?cat=gadgets-accessories" class="btn btn-outline">View Collection</a>
+    </div>
+  </section>
+
+  <!-- Category product rows — Sony style -->
+  <div id="categorySections"></div>
+
+  <!-- Trust signals -->
+  <section style="padding:80px 0">
+    <div class="container">
+      <div class="content-grid reveal">
+        <div class="contact-card">
+          <h3>Free Delivery</h3>
+          <p style="color:var(--gray-500);margin-top:8px">24–48 hour delivery across Kigali on all orders</p>
+        </div>
+        <div class="contact-card">
+          <h3>MTN MoMo</h3>
+          <p style="color:var(--gray-500);margin-top:8px">Pay securely with MTN Mobile Money, Visa & Mastercard</p>
+        </div>
+        <div class="contact-card">
+          <h3>7-Day Returns</h3>
+          <p style="color:var(--gray-500);margin-top:8px">Easy returns on all verified products</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="js/product-images.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
